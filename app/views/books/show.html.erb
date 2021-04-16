@@ -1,0 +1,16 @@
+<div class="book">
+  <p>
+    <strong>Title:</strong>
+      <%= @book.title %>
+  </p>
+  <p>
+    <strong>Book:</strong>
+      <%= @book.body %>
+  </p>
+</div>
+  
+<div class="button">
+  <%= link_to "Edit", edit_book_path %>
+  <span>|</span>
+  <%= link_to "Back", books_path %>
+</div>
