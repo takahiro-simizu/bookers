@@ -14,7 +14,11 @@
     <tr>
       <td><%= a.title %></td>
       <td><%= a.body %></td>
+      <td><%= link_to "Show", book_path(a.id) %></td>
+      <td><%= link_to "Edit", edit_book_path(a.id) %></td>
+      <td><%= link_to "destroy", book_path(a.id), method: :delete %></td
     </tr>
+
   <% end %>
   </tbody>
 </table>
