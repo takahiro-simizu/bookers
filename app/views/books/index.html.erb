@@ -26,6 +26,12 @@
 </table>
 
 <div class="form">
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>errors prohibited this book from being saved:
+  <% @book.errors.full_messages.each do |message| %>
+  <%= message %>
+  <% end %>
+<% end %>
   <h3>New Book</h3>
   <%= form_with model:@book, local:true do |f| %>
   <h6>Title</h6>
